@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- Titre du site web -->
+  <title>Ma To-Do List</title>
+  <!-- Lien vers la feuille de style CSS externe -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lien vers les polices Google Fonts (Poppins et Roboto) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<!-- Corps de la page web -->
+<body>
+  <!-- Élément principal qui contient tout le contenu -->
+  <main>
+    <!-- Conteneur principal qui englobe la section image et la section to-do -->
+    <div class="wrapper">
+
+      <!-- Section contenant l’image décorative -->
+      <div class="image-section">
+        <!-- Image illustrative -->
+        <img src="Frontend/asset/7645418.jpg" alt="Illustration">
+      </div>
+
+      <!-- Section contenant l’interface de la liste de tâches -->
+      <div class="todo-section">
+
+        <!-- Titre principal de la section to-do -->
+        <h1>ART DE CRÉER SES TÂCHES</h1>
+
+        <!-- Texte de motivation sous le titre -->
+        <p class="motivation">
+          "Chaque grande chose commence par une petite tâche."<br>
+          Organise tes idées, vide ta tête, et avance pas à pas.<br>
+          Commence dès maintenant — écris ta première mission du jour.
+        </p>
+
+        <!-- Formulaire pour ajouter une nouvelle tâche -->
+        <form id="todo-form">
+          <!-- Champ texte pour saisir une nouvelle tâche, obligatoire -->
+          <input type="text" id="todo-input" placeholder="Ajouter une tâche..." required>
+          <!-- Bouton pour soumettre et ajouter la tâche -->
+          <button type="submit">+</button>
+        </form>
+
+        <!-- Boutons filtres pour afficher les tâches selon leur état -->
+        <div class="filters">
+          <!-- Bouton pour afficher toutes les tâches, actif par défaut -->
+          <button data-filter="all" class="active">Toutes</button>
+          <!-- Bouton pour afficher seulement les tâches en cours -->
+          <button data-filter="active">En cours</button>
+          <!-- Bouton pour afficher seulement les tâches terminées -->
+          <button data-filter="completed">Terminées</button>
+        </div>
+
+        <!-- Liste non ordonnée qui contiendra dynamiquement les tâches -->
+        <ul id="todo-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lien vers le fichier JavaScript externe qui gère la logique des tâches -->
+  <script src="app.js"></script>
+</body>
+</html>
